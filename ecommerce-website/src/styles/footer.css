@@ -1,0 +1,82 @@
+footer {
+  text-align: center;
+  background-color: var(--dark-color);
+  position: static;
+  bottom: 0;
+  width: 100%;
+
+  .lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: smaller;
+    color: grey;
+    background-color: var(--dark-color);
+    padding: 10px 4em;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: #e9ecef;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    gap: 20px;
+    font-size: larger;
+    .bi {
+      color: grey;
+    }
+    .bi-instagram:hover {
+      color: crimson;
+    }
+    .bi-whatsapp:hover {
+      color: green;
+    }
+    .bi-facebook:hover {
+      color: blue;
+    }
+  }
+
+  .upper {
+    font-size: smaller;
+    text-align: left;
+    line-height: 1.5;
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    gap: 1em;
+    padding: 20px 4em;
+    background-color: var(--dark-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: #e9ecef;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 0.5em;
+      align-items: center;
+      li {
+        a {
+          color: grey;
+          text-decoration: none;
+        }
+        a:hover {
+          color: black;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    width: 90%;
+    margin: 0 auto;
+    background: #ddd;
+    border-radius: 2px;
+  }
+}
