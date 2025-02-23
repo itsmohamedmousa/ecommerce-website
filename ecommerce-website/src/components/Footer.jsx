@@ -30,11 +30,12 @@ function Footer() {
           <h3>Quick Links</h3>
           <ul>
             <li><i className="bi bi-caret-right-fill" /><NavLink to="/">Home</NavLink></li>
+            <li><i className="bi bi-caret-right-fill" /><NavLink to="/Shop">Shop</NavLink></li>
             <li><i className="bi bi-caret-right-fill" /><NavLink to="/About">About</NavLink></li>
             <li><i className="bi bi-caret-right-fill" /><NavLink to="/ContactUs">Contact us</NavLink></li>
-            <li><i className="bi bi-caret-right-fill" /><NavLink to="/Profile">Profile</NavLink></li>
             <li><i className="bi bi-caret-right-fill" /><NavLink to="/Cart">Cart</NavLink></li>
             <li><i className="bi bi-caret-right-fill" /><NavLink to="/Wishlist">Wishlist</NavLink></li>
+            <li><i className="bi bi-caret-right-fill" /><NavLink to="/Profile">Profile</NavLink></li>
           </ul>
         </div>
       </div>

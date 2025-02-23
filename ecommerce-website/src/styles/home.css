@@ -1,5 +1,5 @@
 .home-container {
-  background-color: #f8f9fa;
+  background-color: var(--bora);
 
   .hero {
     background-image: url('/src/assets/hero.jpg');
@@ -34,7 +34,7 @@
       overflow: hidden;
       text-wrap: nowrap;
       border-right: 3px solid;
-      animation: typing 2s steps(20) infinite alternate-reverse, blink 0.5s step-end infinite;
+      animation: typing 2s steps(20, end) infinite alternate-reverse, blink 0.5s step-end infinite;
     }
   }
 
@@ -53,16 +53,15 @@
       justify-content: space-between;
       align-items: center;
       font-size: 1em;
-      transition: all 0.3 ease;
+      transition: all 0.3 linear ;
+      pointer-events: none;
       &:hover > :not(:hover) {
         opacity: 0.8;
-      }
-      &:hover {
-        background-color: var(--card-color);
-        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.5);
+        filter: blur(5px);
       }
 
       .item-card {
+        pointer-events: all;
         flex: 1;
         margin-bottom: 1em;
         background-color: var(--card-color);
@@ -72,13 +71,15 @@
         display: inline;
         height: fit-content;
         text-align: center;
-        transition: all 0.3s ease;
+        transition: all 0.3s;
         cursor: pointer;
         max-width: 28%;
+        animation: fadeIn 1.5s ease-in both; 
+        animation-timeline: view();
+        will-change: transform;
         &:hover {
-          transform: scale(1.05);
-          box-shadow: 0 7px 15px rgba(0, 0, 0, 0.5);
-          background-color: var(--soft-blue);
+          box-shadow: 0 7px 15px var(--black-olive);
+          background-color: var(--platinum);
         }
         .inline {
           display: flex;
@@ -93,10 +94,10 @@
           font-size: 1em;
           padding: 1em;
           border-radius: 5px;
-          cursor: pointer;
           &:hover {
             background-color: var(--muted-lavender);
             box-shadow: 0 7px 15px rgba(0, 0, 0, 0.5);
+            transition: all 0.2s linear;
           }
           &.add-to-cart {
             position: relative;
@@ -134,13 +135,13 @@
         .price {
           font-size: 1.2em;
           font-weight: bold;
-          color: var(--greyish-purple);
+          color: var(--dark-blue);
         }
         .product-name {
           font-size: 1.5em;
           font-weight: bold;
           margin: 0.5em 0;
-          color: #3e3e56;
+          color: var(--dark-blue);
         }
       }
     }
@@ -157,13 +158,24 @@
 }
 
 @keyframes typing {
-  from {
-    width: 0ch;
-  }
+  0% { width: 0; }
+  70% { width: 20ch; }
+  100% { width: 20ch; }
 }
 
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-50px) scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
