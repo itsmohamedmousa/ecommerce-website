@@ -32,6 +32,7 @@ function App() {
     } else {
       setIsVisible(false);
     }
+    console.log("something")
   };
 
   useEffect(() => {
