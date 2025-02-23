@@ -1,16 +1,16 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 
-function NavBar( props ) {
+function NavBar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  
 
-  return ( 
+
+  return (
     <nav>
       <div className="dropdown">
         <button className="menu-btn" onClick={toggleDropdown}>☰ Categories</button>
@@ -28,6 +28,7 @@ function NavBar( props ) {
         <NavLink to="/Shop" className={({ isActive }) => `${isActive ? "active-link" : ""}`}>Shop</NavLink>
         <NavLink to="/About" className={({ isActive }) => `${isActive ? "active-link" : ""}`}>About</NavLink>
         <NavLink to="/ContactUs" className={({ isActive }) => `${isActive ? "active-link" : ""}`}>Contact Us</NavLink>
+        <NavLink to="/admin" className={({ isActive }) => `${isActive ? "active-link" : ""}`}>Admin</NavLink>
 
       </div>
       <NavLink to="/Wishlist" className={({ isActive }) => `wishlist ${isActive ? "active-link" : ""}`}><i className="bi bi-heart-fill" /></NavLink>
@@ -35,5 +36,5 @@ function NavBar( props ) {
     </nav>
    );
 }
- 
-export default NavBar;
+
+export default React.memo(NavBar);
