@@ -1,10 +1,17 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root {
-  --main-color: #007bff;
+  --main-color: #2bc0e4;
+  /* --main-color: #102542; */
   --dark-color: #333;
   --card-color: #f3eaef;
+  --bora: #EAECC6;
+  /* --bora: #F87060; */
   --soft-blue: #DEE4F0;
+  --dark-blue: #102542;
+  --robin-egg-blue: #50C9CE;
+  --platinum: #e2f3f4;
+  --black-olive: #2E382E;
   --muted-lavender: #5A5A89;
   --greyish-purple: #3E3E56;
   --soft-grey: #7D8C8F;
@@ -26,7 +33,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  background-color: #F4F6FA;
+  background-color: var(--bora);
   font-family: 'Roboto', sans-serif;
   color: black;
 }
@@ -37,9 +44,9 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  color: var(--main-color);
-  border-bottom: 2px solid var(--muted-lavender);
+.main-heading {
+  color: var(--dark-blue);
+  border-bottom: 2px solid var(--dark-blue);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 

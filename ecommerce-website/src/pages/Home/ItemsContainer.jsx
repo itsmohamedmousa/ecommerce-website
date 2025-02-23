@@ -6,7 +6,7 @@ function ItemsContainer( props ) {
   return (
     <>
       <div className="items-container">
-        <h1>{ title }</h1>
+        <h1 className="main-heading">{ title }</h1>
         <div className="items">
           <ItemCard />
           <div className="divider"></div>

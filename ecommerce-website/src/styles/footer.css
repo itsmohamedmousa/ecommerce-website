@@ -1,6 +1,6 @@
 footer {
   text-align: center;
-  background-color: var(--dark-color);
+  background-color: var(--black-olive);
   position: static;
   bottom: 0;
   width: 100%;
@@ -10,12 +10,13 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: smaller;
-    color: grey;
-    background-color: var(--dark-color);
+    color: var(--bora);
+    background-color: var(--black-olive);
     padding: 10px 4em;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &:hover {
-      background-color: #e9ecef;
+      background-color: var(--bora);
+      color: var(--black-olive);
     }
   }
 
@@ -41,17 +42,18 @@ footer {
     font-size: smaller;
     text-align: left;
     line-height: 1.5;
-    color: grey;
+    color: var(--bora);
     display: flex;
     justify-content: space-between;
     align-items: top;
     gap: 1em;
     padding: 20px 4em;
-    background-color: var(--dark-color);
+    background-color: var(--black-olive);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: background-color 0.3s ease-in-out;
     &:hover {
-      background-color: #e9ecef;
+      background-color: var(--bora);
+      color: var(--black-olive);
     }
     ul {
       list-style: none;
@@ -65,11 +67,20 @@ footer {
           text-decoration: none;
         }
         a:hover {
-          color: black;
+          color: var(--black-olive);
           text-decoration: underline;
         }
       }
     }
+  }
+  .links>ul {
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: left;
+    align-items: start;
   }
 
   .divider {

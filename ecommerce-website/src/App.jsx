@@ -13,8 +13,6 @@ function App() {
     }
   };
 
-  console.log('from ahmad');
-
   useEffect(() => {
     importAllCSS();
 
