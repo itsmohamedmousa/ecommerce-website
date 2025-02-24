@@ -25,6 +25,24 @@
     -webkit-text-fill-color: transparent;
     animation: pulse 2s infinite alternate-reverse;
   }
+  button {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, var(--soft-blue), var(--greyish-purple));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulse 2s infinite alternate-reverse;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1em 2em;
+    font-size: large;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      -webkit-text-fill-color: black;
+      transform: scale(1.1);
+      animation: paused;
+    }
+  }
 }
 
 @keyframes pulse {
