@@ -1,5 +1,6 @@
 import Hero from "./Hero";
 import ItemsContainer from "./ItemsContainer";
+import './home.css';
 
 function Home() {
   return ( 

@@ -6,7 +6,7 @@ import Profile from '../../pages/Profile/Profile';
 import About from '../../pages/About/About';
 import ContactUs from '../../pages/ContactUs/ContactUs';
 import Wishlist from '../../pages/Wishlist/Wishlist';
-import NotFound from '../../pages/NotFound';
+import NotFound from '../../pages/NotFound/NotFound';
 import Search from '../../pages/Search/Search';
 import Shop from '../../pages/Shop/Shop';
 import Layout from './Layout';

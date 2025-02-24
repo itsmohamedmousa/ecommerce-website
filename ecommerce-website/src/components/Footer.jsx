@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
+import './footer.css';
 
 function Footer() {
   return ( 
     <footer>
       <div className="upper">
-        {/* temporary */}
         <div className="logo">
         <NavLink to="/" className="logo"><img src="/src/assets/image.jpg" alt="Logo" width="80px"/></NavLink>
         <h3>E-Commerce Website</h3>

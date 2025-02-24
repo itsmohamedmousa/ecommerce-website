@@ -1,5 +1,6 @@
 import { NavLink, useSearchParams } from "react-router-dom";
 import Searchbar from "./Searchbar";
+import './header.css';
 
 function Header( props ) {
     const user = props.username;
