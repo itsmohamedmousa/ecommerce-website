@@ -1,12 +1,12 @@
 .home-container {
-  background-color: var(--bora);
+  background-color: var(--background);
 
   .hero {
     background-image: url('/src/assets/hero.jpg');
     background-size: cover;
     background-position: center;
     padding: 2em 0;
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -34,7 +34,9 @@
       overflow: hidden;
       text-wrap: nowrap;
       border-right: 3px solid;
-      animation: typing 2s steps(20, end) infinite alternate-reverse, blink 0.5s step-end infinite;
+      animation:
+        typing 2s steps(20, end) infinite alternate-reverse,
+        blink 0.5s step-end infinite;
     }
   }
 
@@ -53,7 +55,7 @@
       justify-content: space-between;
       align-items: center;
       font-size: 1em;
-      transition: all 0.3 linear ;
+      transition: all 0.3 linear;
       pointer-events: none;
       &:hover > :not(:hover) {
         opacity: 0.8;
@@ -74,7 +76,7 @@
         transition: all 0.3s;
         cursor: pointer;
         max-width: 28%;
-        animation: fadeIn 1.5s ease-in both; 
+        animation: fadeIn 1.5s ease-in both;
         animation-timeline: view();
         will-change: transform;
         &:hover {
@@ -158,9 +160,15 @@
 }
 
 @keyframes typing {
-  0% { width: 0; }
-  70% { width: 20ch; }
-  100% { width: 20ch; }
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 20ch;
+  }
+  100% {
+    width: 20ch;
+  }
 }
 
 @keyframes blink {

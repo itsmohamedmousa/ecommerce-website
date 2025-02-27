@@ -4,9 +4,9 @@ import { useState } from 'react';
 function Searchbar() {
   const navigate = useNavigate();
 
-  const [ search, setSearch ] = useState({ query: '', category: 'all-categories' });
+  const [search, setSearch] = useState({ query: '', category: 'all-categories' });
 
-  const handleSearch = (e) => {
+  const handleSearch = () => {
     if (search.query.trim()) {
       navigate(`/Search?query=${search.query}&category=${search.category}`);
       setSearch({ query: '', category: 'all-categories' });
@@ -14,21 +14,18 @@ function Searchbar() {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       handleSearch();
     }
   };
-
 
   return (
     <>
       <div className="search-container">
         <select
-        className="search-dropdown"
-        value={search.category}
-        onChange={(e) =>
-          setSearch((prev) => ({ ...prev, category: e.target.value }))
-        }
+          className="search-dropdown"
+          value={search.category}
+          onChange={(e) => setSearch((prev) => ({ ...prev, category: e.target.value }))}
         >
           <option value="all-categories">All Categories...</option>
           <option value="something">something</option>

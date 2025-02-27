@@ -10,12 +10,12 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: smaller;
-    color: var(--bora);
+    color: var(--background);
     background-color: var(--black-olive);
     padding: 10px 4em;
     transition: all 0.3s ease-in-out;
     &:hover {
-      background-color: var(--bora);
+      background-color: var(--background);
       color: var(--black-olive);
     }
   }
@@ -42,7 +42,7 @@ footer {
     font-size: smaller;
     text-align: left;
     line-height: 1.5;
-    color: var(--bora);
+    color: var(--background);
     display: flex;
     justify-content: space-between;
     align-items: top;
@@ -52,7 +52,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: background-color 0.3s ease-in-out;
     &:hover {
-      background-color: var(--bora);
+      background-color: var(--background);
       color: var(--black-olive);
     }
     ul {
@@ -73,7 +73,7 @@ footer {
       }
     }
   }
-  .links>ul {
+  .links > ul {
     display: flex;
     height: 100px;
     flex-direction: column;

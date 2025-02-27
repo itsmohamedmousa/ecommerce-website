@@ -5,9 +5,9 @@ import Footer from '../../components/Footer';
 import NavBar from '../../components/NavBar';
 
 const Layout = () => {
-    const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-    const toggleVisibility = () => {
+  const toggleVisibility = () => {
     if (window.pageYOffset > 200) {
       setIsVisible(true);
     } else {
@@ -15,16 +15,16 @@ const Layout = () => {
     }
   };
 
-    useEffect(() => {
-      window.addEventListener('scroll', toggleVisibility);
-      return () => {
-        window.removeEventListener('scroll', toggleVisibility);
-      };
-    }, []);
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
 
   return (
     <div className="app-container">
-      <Header username="" />
+      <Header username="Username" />
       <NavBar />
       <main>
         <Outlet />

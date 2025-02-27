@@ -1,8 +1,8 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   { ignores: ['dist'] },
@@ -29,17 +29,14 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
 
-      "no-plusplus": "warn",
-      "no-param-reassign": "warn",
-      "no-underscore-dangle": "warn",
-      "no-unused-vars": "error",
-      "no-console": "warn",
+      'no-plusplus': 'warn',
+      'no-param-reassign': 'warn',
+      'no-underscore-dangle': 'warn',
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
 
       'react/jsx-no-target-blank': 'off',
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },
-]
+];

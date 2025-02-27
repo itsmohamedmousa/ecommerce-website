@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #F4F6FA;
+  background-color: #f4f6fa;
   color: var(--dark-color);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   h1 {
@@ -46,6 +46,10 @@
 }
 
 @keyframes pulse {
-  from { opacity: 0.3; }
-  to { opacity: 1; }
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -16,21 +16,21 @@ const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path='/admin' element={<Admin />} />
-      <Route element={<Layout />} >
-        <Route index element={<Home />} />
-        <Route path="Shop" element={<Shop />} />
-        <Route path="About" element={<About />} />
-        <Route path="ContactUs" element={<ContactUs />} />
-        <Route path="Profile" element={<Profile />} />
-        <Route path="Cart" element={<Cart />} />
-        <Route path="Wishlist" element={<Wishlist />} />
-        <Route path="Categories/:id" element={<Categories />} />
-        <Route path="Search" element={<Search />} />
-      </Route>
+        <Route path="/admin" element={<Admin />} />
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="Shop" element={<Shop />} />
+          <Route path="About" element={<About />} />
+          <Route path="ContactUs" element={<ContactUs />} />
+          <Route path="Profile" element={<Profile />} />
+          <Route path="Cart" element={<Cart />} />
+          <Route path="Wishlist" element={<Wishlist />} />
+          <Route path="Categories/:id" element={<Categories />} />
+          <Route path="Search" element={<Search />} />
+        </Route>
 
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 };
