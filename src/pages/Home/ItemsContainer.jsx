@@ -1,26 +1,29 @@
 import ItemCard from './ItemCard';
 import PropTypes from 'prop-types';
 
-function ItemsContainer(props) {
-  ItemsContainer.propTypes = {
-    title: PropTypes.string.isRequired,
-  };
-  const title = props.title;
-
+function ItemsContainer({ title, products }) {
   return (
-    <>
-      <div className="items-container">
-        <h1 className="main-heading">{title}</h1>
+    <div className="items-container">
+      <h2 id="products" className="main-heading">
+        {title}
+      </h2>
+
+      {products.length > 0 ? (
         <div className="items">
-          <ItemCard />
-          <div className="divider"></div>
-          <ItemCard />
-          <div className="divider"></div>
-          <ItemCard />
+          {products.map((product) => (
+            <ItemCard key={product.id} product={product} />
+          ))}
         </div>
-      </div>
-    </>
+      ) : (
+        <p className="no-products">No products available in this category.</p>
+      )}
+    </div>
   );
 }
+
+ItemsContainer.propTypes = {
+  title: PropTypes.string.isRequired,
+  products: PropTypes.array.isRequired,
+};
 
 export default ItemsContainer;

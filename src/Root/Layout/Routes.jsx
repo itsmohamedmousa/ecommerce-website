@@ -16,7 +16,7 @@ const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/Admin" element={<Admin />} />
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="Shop" element={<Shop />} />

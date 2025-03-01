@@ -1,4 +1,11 @@
 function Hero() {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <div className="hero">
@@ -10,6 +17,9 @@ function Hero() {
         <div className="right">
           <p>Discover our wide range of products</p>
         </div>
+        <button className="shop-btn" onClick={() => scrollToSection('products')}>
+          Shop Now
+        </button>
       </div>
     </>
   );
