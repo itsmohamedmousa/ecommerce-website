@@ -32,11 +32,11 @@ function Home() {
         setProducts(productsArray);
 
         // Debug log to see the structure
-        console.log('API Response:', data);
-        console.log('Processed Products Array:', productsArray);
+        // console.log('API Response:', data);
+        // console.log('Processed Products Array:', productsArray);
       } catch (err) {
-        console.error('Error fetching products:', err);
-        setError('Failed to load products. Please try again later.');
+        // console.error('Error fetching products:', err);
+        setError('Failed to load products. Please try again later.', err);
       } finally {
         setLoading(false);
       }
@@ -47,13 +47,19 @@ function Home() {
 
   // Only attempt to slice if products is an array with elements
   const featuredProducts =
-    Array.isArray(products) && products.length > 0 ? products.slice(0, 4) : [];
-  const hotDeals = Array.isArray(products) && products.length > 4 ? products.slice(4, 8) : [];
-  const bestSellers = Array.isArray(products) && products.length > 8 ? products.slice(8, 12) : [];
+    Array.isArray(products) && products.length > 0 ? products.slice(0, 5) : [];
+  const hotDeals = Array.isArray(products) && products.length > 5 ? products.slice(5, 10) : [];
+  const bestSellers = Array.isArray(products) && products.length > 10 ? products.slice(10, 15) : [];
+  const heroImage =
+    Array.isArray(products) && products.length > 0
+      ? products[1].image
+      : '/src/assets/image-not-found(1).jpg';
 
-  return (
+  return loading ? (
+    <div className="loading"></div>
+  ) : (
     <div className="home-container">
-      <Hero />
+      <Hero imgPath={heroImage} />
 
       {/* {loading && <div className="loading"></div>} */}
       {error && <div className="error">{error}</div>}

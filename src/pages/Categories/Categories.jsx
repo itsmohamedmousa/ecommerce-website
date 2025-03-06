@@ -1,8 +1,8 @@
-import NavBar from "../../components/NavBar";
+import NavBar from '../../components/NavBar';
 function Categories() {
-  return ( 
+  return (
     <>
-     <h2>Categories Page</h2>
+      <h2>Categories Page</h2>
     </>
   );
 }

@@ -1,61 +1,11 @@
 .home-container {
   background-color: var(--background);
 
-  .hero {
-    background-image: url('/src/assets/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 2em 0;
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-
-    .shop-btn {
-      background-color: var(--main-color);
-      color: white;
-      border: none;
-      font-size: 0.8em;
-      padding: 0.5em;
-      border-radius: 5px;
-      &:hover {
-        background-color: var(--muted-lavender);
-        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.5);
-        transition: all 0.2s linear;
-      }
-    }
-
-    .left,
-    .right {
-      flex: 1;
-      text-align: center;
-      margin: 0 2em;
-    }
-
-    .typing {
-      font-family: 'Courier New', Courier, monospace;
-      color: var(--main-color);
-      width: 20ch;
-      display: flex;
-      overflow: hidden;
-      text-wrap: nowrap;
-      border-right: 3px solid;
-      text-align: center;
-      animation:
-        typing 2s steps(20, end) infinite alternate-reverse,
-        blink 0.5s step-end infinite;
-    }
-  }
-
   .items-container {
     display: flex;
     flex-direction: column;
     padding: 2em 5em;
+    background-color: var(--background);
 
     .main-heading {
       max-width: fit-content;
@@ -74,14 +24,14 @@
       pointer-events: none;
       &:hover > :not(:hover) {
         opacity: 0.8;
-        filter: blur(5px);
+        filter: blur(2px);
       }
 
       .item-card {
         pointer-events: all;
         flex: 1;
         margin-bottom: 1em;
-        background-color: var(--card-color);
+        background-color: white;
         color: black;
         border-radius: 5px;
         padding: 1em 1em 0 1em;
@@ -108,10 +58,11 @@
         &:nth-child(4) {
           animation-delay: 0.7s;
         }
+        &:nth-child(5) {
+          animation-delay: 0.9s;
+        }
         &:hover {
-          box-shadow: 0 7px 15px var(--black-olive);
-          background-color: var(--platinum);
-          transform: translateY(-15px);
+          box-shadow: 0 2px 7px var(--dark-color);
         }
         .categories {
           font-size: 0.85rem;
@@ -169,7 +120,7 @@
           }
         }
         button {
-          background-color: var(--main-color);
+          background-color: var(--button-color);
           color: white;
           border: none;
           font-size: 1em;
@@ -182,14 +133,13 @@
           }
           &.add-to-cart {
             position: relative;
-            background-color: var(--main-color);
             color: white;
             border: none;
             font-size: 1em;
             border-radius: 5px;
             cursor: pointer;
             &:hover {
-              background-color: var(--muted-lavender);
+              background-color: var(--button-hover-color);
               box-shadow: 0 7px 15px rgba(0, 0, 0, 0.5);
             }
             &::after {
@@ -200,9 +150,11 @@
               height: auto;
               padding: 5px;
               font-size: 1em;
+              border-radius: 5px;
+              opacity: 0.5;
               text-align: center;
               line-height: 10px;
-              background: var(--muted-lavender);
+              background: var(--button-hover-color);
               white-space: nowrap;
               position: absolute;
               top: 25%;
@@ -241,7 +193,6 @@
       }
     }
   }
-  .loading,
   .error,
   .no-products {
     text-align: center;
@@ -292,21 +243,16 @@
   }
 }
 
-/* Not working for now */
 @media (max-width: 768px) {
-  .hero {
-    text-align: center;
-    padding: 4em 1em;
-    font-size: 1.2em !important;
-  }
-  .left,
-  .right {
-    flex: none;
-    width: 100%;
-    margin: 0;
-  }
   .items-container {
-    padding: 0;
+    grid-template-columns: 1fr;
+
+    .items .item-card {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      animation: none !important;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 
 function Search() {
-  const [ searchParams ] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const query = searchParams.get('query');
   const category = searchParams.get('category');
 

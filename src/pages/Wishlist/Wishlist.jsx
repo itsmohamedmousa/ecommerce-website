@@ -1,9 +1,5 @@
 function Wishlist() {
-  return (
-    <>
-      ayo
-    </>
-  );
+  return <>ayo</>;
 }
- 
+
 export default Wishlist;

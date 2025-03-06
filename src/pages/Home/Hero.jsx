@@ -1,4 +1,15 @@
-function Hero() {
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import './hero.css';
+
+function Hero(props) {
+  Hero.propTypes = {
+    imgPath: PropTypes.string,
+  };
+  Hero.defaultProps = {
+    imgPath: '/src/assets/image-not-found(1).jpg',
+  };
+  const image = props.imgPath;
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -7,21 +18,27 @@ function Hero() {
   };
 
   return (
-    <>
-      <div className="hero">
-        <div className="left">
-          <h2>
-            Welcome to our <div className="typing">E-COMMERCE WEBSITE</div>
-          </h2>
+    <div className="hero">
+      <div className="hero-content">
+        <span className="hero-badge">New Collection</span>
+        <h1>Elevate Your Style This Season</h1>
+        <p>
+          Discover our premium selection of thoughtfully crafted products designed to enhance your
+          everyday life. Enjoy free shipping on all orders over $50.
+        </p>
+        <div className="button-group">
+          <button onClick={() => scrollToSection('products')} className="cta-button">
+            Shop Now
+          </button>
+          <NavLink to="/Shop">
+            <button className="secondary-button">View Collection</button>
+          </NavLink>
         </div>
-        <div className="right">
-          <p>Discover our wide range of products</p>
-        </div>
-        <button className="shop-btn" onClick={() => scrollToSection('products')}>
-          Shop Now
-        </button>
       </div>
-    </>
+      <div className="hero-image">
+        <img src={image} alt="Featured product showcase" />
+      </div>
+    </div>
   );
 }
 

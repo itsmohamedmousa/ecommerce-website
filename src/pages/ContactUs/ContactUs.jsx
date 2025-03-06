@@ -1,9 +1,5 @@
-function ContactUs(){
-  return (
-    <>
-    
-    </>
-  );
+function ContactUs() {
+  return <></>;
 }
- 
+
 export default ContactUs;
