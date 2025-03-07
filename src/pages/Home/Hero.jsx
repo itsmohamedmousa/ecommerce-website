@@ -18,7 +18,7 @@ function Hero(props) {
   };
 
   return (
-    <div className="hero">
+    <div className="container hero">
       <div className="hero-content">
         <span className="hero-badge">New Collection</span>
         <h1>Elevate Your Style This Season</h1>
